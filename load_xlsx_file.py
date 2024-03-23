@@ -2,7 +2,6 @@ import pandas as pd
 import openpyxl
 from sqlalchemy import create_engine
 
-
 # Database connection string
 conn_string = 'postgresql://postgres:password@localhost/Hospital_Patient_Management_System'
 db = create_engine(conn_string)
