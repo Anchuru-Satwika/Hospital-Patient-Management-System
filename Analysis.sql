@@ -464,4 +464,12 @@ ORDER BY diabetes_patients DESC
 LIMIT 1;
 
 -- Readmission Rate within 30 Days:
-SELECT m1.patient_id, p.patient_name, m1.admission_date AS readmission_date, m1.discharge_date AS readmission_discharge_date, m2.admission_date AS previous_admission_date FROM MedicalRecords m1 JOIN MedicalRecords m2 ON m1.patient_id = m2.patient_id AND m1.admission_date > m2.discharge_date AND DATEDIFF(m1.admission_date, m2.discharge_date) <= 30 JOIN Patients p ON m1.patient_id = p.patient_id ORDER BY m1.patient_id, m1.admission_date;
+
+SELECT m1.patient_id, p.patient_name, m1.admission_date AS readmission_date, 
+    m1.discharge_date AS readmission_discharge_date, 
+    m2.admission_date AS previous_admission_date 
+FROM MedicalRecords m1 JOIN MedicalRecords m2 
+    ON m1.patient_id = m2.patient_id AND m1.admission_date > m2.discharge_date 
+    AND DATEDIFF(m1.admission_date, m2.discharge_date) <= 30 
+    JOIN Patients p ON m1.patient_id = p.patient_id 
+ORDER BY m1.patient_id, m1.admission_date;
