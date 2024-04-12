@@ -1,5 +1,5 @@
 -- Create Database
-CREATE DATABASE medical;
+CREATE DATABASE Hospital_Patient_Management_System;
 
 USE medical;
 
