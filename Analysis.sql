@@ -1,7 +1,7 @@
 -- Create Database
 CREATE DATABASE Hospital_Patient_Management_System;
 
-USE medical;
+USE Hospital_Patient_Management_System;
 
 -- Create Patients Table
 CREATE TABLE Patients (
